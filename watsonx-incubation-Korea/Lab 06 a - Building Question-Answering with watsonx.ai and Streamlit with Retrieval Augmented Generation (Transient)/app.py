@@ -67,9 +67,9 @@ with st.sidebar:
     st.write("Configure model and parameters:")
 
     model_option = st.selectbox("Model Selected:", ["llama2-70b", "flan-ul2", "granite-13b"])
-    chain_option = st.selectbox("Chain Type:", ["stuff", "refine", "mapReduce", "custom"])
+    chain_option = st.selectbox("Chain Type:", ["custom", "refine", "mapReduce", "stuff"])
     decoding_option = st.selectbox("Decoding Parameter:", ["greedy", "sample"])
-    max_new_tokens = st.number_input("Max Tokens:", 1, 1024, value=256)
+    max_new_tokens = st.number_input("Max Tokens:", 1, 1024, value=100)
     min_new_tokens = st.number_input("Min Tokens:", 0, value=8)
         
     st.markdown('''
